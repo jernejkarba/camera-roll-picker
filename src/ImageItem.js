@@ -26,10 +26,10 @@ const ImageItem = (props) => {
     videoMarker,
     itemSize,
   } = props
-  const { image, type } = item.node
+  const { image, type, location, timestamp } = item.node
 
   const onPress = useCallback(() => {
-    onClick({ ...image, type })
+    onClick({ ...image, type, location, timestamp })
   }, [item, onClick])
 
   return (
